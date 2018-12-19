@@ -17,7 +17,7 @@
             <h1><center>Eventos CV</center><h1>
             @yield('header')
         </header>
-        <div class="row" style="position:relative;left: 27%;">
+        <div class="row" style="position:relative;left: 37%;">
             <div class="btn-group" role="group" aria-label="Basic example">
                 <a href="/"><button type="button" class="btn btn-secondary">Inicio</button></a>
                 <a href="/evento/agregar"><button type="button" class="btn btn-secondary">Agregar Evento</button></a>

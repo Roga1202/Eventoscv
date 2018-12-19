@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Categoria extends Model
 {
     //
+
+    protected $guarded = [];
     
     const CREATED_AT = 'CA_inicio';
     const UPDATED_AT = 'CA_actualizacion';

@@ -18,6 +18,14 @@
 				<h2><center>Agregar evento</center></h2>
 			</div>
 		</div>
+		
+		@if (isset($result))
+			<div class="row">
+				<div class="col-md-12">
+					<div class="alert alert-success">Evento Guardado!</div>
+				</div>
+			</div>
+		@endif
 
 		<form name="agregar_producto" class="form-horizontal" method="POST" enctype="multipart/form-data" action="/evento/agregar" autocomplete="off">
 		<br>
