@@ -21,3 +21,15 @@ $factory->define(App\User::class, function (Faker $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(App\Evento::class, function(Faker $faker){
+
+    return [
+        'EV_name' => $faker->name,
+        'EV_descripcion' => $faker->realText($faker->numberBetween(10,20)),
+        'CA_ID' => $faker->randomDigitNotNull,
+        'EV_lugar' => $faker->city,
+        'EV_prize' => $faker->randomFloat(2),
+        'EV_date' => $faker->date(),
+    ];
+});
