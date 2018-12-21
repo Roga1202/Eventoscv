@@ -9,7 +9,17 @@ use Illuminate\Http\Request;
 
 class EventoController extends Controller
 {
-    //
+    
+    public function getevento(){
+
+        $evento = Evento::paginate(15);
+        return view('evento.index',[
+            'eventos' => $evento,
+        ]);
+    }
+    
+
+
     public function getagregar_evento(){
         $categorias= Categoria::query()->orderBy('CA_ID', 'asc')->get();
         return view('evento.agregar_evento',[
@@ -44,6 +54,15 @@ class EventoController extends Controller
         return view('evento.agregar_evento',[
             'result' => $result,
             'categorias' => $categorias,
+        ]);
+    }
+
+    public function geteliminar_evento($id){
+        $evento = Evento::paginate(15);
+
+        $evento->delete();
+        return view('evento.index',[
+            'eventos' => $evento,
         ]);
     }
 }

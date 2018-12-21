@@ -22,6 +22,14 @@ $factory->define(App\User::class, function (Faker $faker) {
     ];
 });
 
+$factory->define(App\Categoria::class, function(Faker $faker){
+
+    return [
+        'CA_name' => $faker->realText($faker->numberBetween(20,45)),
+        'CA_descripcion' => $faker->realText($faker->numberBetween(20,45)),
+    ];
+});
+
 $factory->define(App\Evento::class, function(Faker $faker){
 
     return [
@@ -31,5 +39,6 @@ $factory->define(App\Evento::class, function(Faker $faker){
         'EV_lugar' => $faker->city,
         'EV_prize' => $faker->randomFloat(2),
         'EV_date' => $faker->date(),
+        'EV_img' => $faker->imageUrl(),
     ];
 });
